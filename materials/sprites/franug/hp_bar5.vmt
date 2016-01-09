@@ -1,9 +1,0 @@
-"UnlitGeneric"
-{
-	"$receiveflashlight"	0
-	"$singlepassflashlight"	0
-	"$basetexture" "sprites/franug/hp_bar5"
-	"$alphatest" 1
-	"$translucent" 1
-	"$vertexalpha" 1
-}
