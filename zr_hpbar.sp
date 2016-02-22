@@ -36,24 +36,24 @@ public OnPluginEnd()
 
 public OnMapStart()
 {
-	AddFileToDownloadsTable("materials/sprites/franug/hp_bar/hp_bar1.vmt");
-	AddFileToDownloadsTable("materials/sprites/franug/hp_bar/hp_bar2.vmt");
-	AddFileToDownloadsTable("materials/sprites/franug/hp_bar/hp_bar3.vmt");
-	AddFileToDownloadsTable("materials/sprites/franug/hp_bar/hp_bar4.vmt");
-	AddFileToDownloadsTable("materials/sprites/franug/hp_bar/hp_bar5.vmt");
-	AddFileToDownloadsTable("materials/sprites/franug/hp_bar/hp_bar6.vmt");
-	AddFileToDownloadsTable("materials/sprites/franug/hp_bar/hp_bar1.vtf");
-	AddFileToDownloadsTable("materials/sprites/franug/hp_bar/hp_bar2.vtf");
-	AddFileToDownloadsTable("materials/sprites/franug/hp_bar/hp_bar3.vtf");
-	AddFileToDownloadsTable("materials/sprites/franug/hp_bar/hp_bar4.vtf");
-	AddFileToDownloadsTable("materials/sprites/franug/hp_bar/hp_bar5.vtf");
-	AddFileToDownloadsTable("materials/sprites/franug/hp_bar/hp_bar6.vtf");
-	PrecacheModel("materials/sprites/franug/hp_bar/hp_bar1.vmt");
-	PrecacheModel("materials/sprites/franug/hp_bar/hp_bar2.vmt");
-	PrecacheModel("materials/sprites/franug/hp_bar/hp_bar3.vmt");
-	PrecacheModel("materials/sprites/franug/hp_bar/hp_bar4.vmt");
-	PrecacheModel("materials/sprites/franug/hp_bar/hp_bar5.vmt");
-	PrecacheModel("materials/sprites/franug/hp_bar/hp_bar6.vmt");
+	AddFileToDownloadsTable("materials/sprites/franug/hp_bar_2/hp_bar1.vmt");
+	AddFileToDownloadsTable("materials/sprites/franug/hp_bar_2/hp_bar2.vmt");
+	AddFileToDownloadsTable("materials/sprites/franug/hp_bar_2/hp_bar3.vmt");
+	AddFileToDownloadsTable("materials/sprites/franug/hp_bar_2/hp_bar4.vmt");
+	AddFileToDownloadsTable("materials/sprites/franug/hp_bar_2/hp_bar5.vmt");
+	AddFileToDownloadsTable("materials/sprites/franug/hp_bar_2/hp_bar6.vmt");
+	AddFileToDownloadsTable("materials/sprites/franug/hp_bar_2/hp_bar1.vtf");
+	AddFileToDownloadsTable("materials/sprites/franug/hp_bar_2/hp_bar2.vtf");
+	AddFileToDownloadsTable("materials/sprites/franug/hp_bar_2/hp_bar3.vtf");
+	AddFileToDownloadsTable("materials/sprites/franug/hp_bar_2/hp_bar4.vtf");
+	AddFileToDownloadsTable("materials/sprites/franug/hp_bar_2/hp_bar5.vtf");
+	AddFileToDownloadsTable("materials/sprites/franug/hp_bar_2/hp_bar6.vtf");
+	PrecacheModel("materials/sprites/franug/hp_bar_2/hp_bar1.vmt");
+	PrecacheModel("materials/sprites/franug/hp_bar_2/hp_bar2.vmt");
+	PrecacheModel("materials/sprites/franug/hp_bar_2/hp_bar3.vmt");
+	PrecacheModel("materials/sprites/franug/hp_bar_2/hp_bar4.vmt");
+	PrecacheModel("materials/sprites/franug/hp_bar_2/hp_bar5.vmt");
+	PrecacheModel("materials/sprites/franug/hp_bar_2/hp_bar6.vmt");
 }
 
 public ZR_OnClientInfected(client, attacker, bool:motherInfect, bool:respawnOverride, bool:respawn)
@@ -118,12 +118,12 @@ CreateIcon(client, hp)
 	new Ent = CreateEntityByName("env_sprite");
 	if(!Ent) return 0;
 	
-	if(hp >= 100) DispatchKeyValue(Ent, "model", "materials/sprites/franug/hp_bar/hp_bar1.vmt");
-	else if(hp >= 80) DispatchKeyValue(Ent, "model", "materials/sprites/franug/hp_bar/hp_bar2.vmt");
-	else if(hp >= 60) DispatchKeyValue(Ent, "model", "materials/sprites/franug/hp_bar/hp_bar3.vmt");
-	else if(hp >= 40) DispatchKeyValue(Ent, "model", "materials/sprites/franug/hp_bar/hp_bar4.vmt");
-	else if(hp >= 20) DispatchKeyValue(Ent, "model", "materials/sprites/franug/hp_bar/hp_bar5.vmt");
-	else DispatchKeyValue(Ent, "model", "materials/sprites/franug/hp_bar/hp_bar6.vmt");
+	if(hp >= 100) DispatchKeyValue(Ent, "model", "materials/sprites/franug/hp_bar_2/hp_bar1.vmt");
+	else if(hp >= 80) DispatchKeyValue(Ent, "model", "materials/sprites/franug/hp_bar_2/hp_bar2.vmt");
+	else if(hp >= 60) DispatchKeyValue(Ent, "model", "materials/sprites/franug/hp_bar_2/hp_bar3.vmt");
+	else if(hp >= 40) DispatchKeyValue(Ent, "model", "materials/sprites/franug/hp_bar_2/hp_bar4.vmt");
+	else if(hp >= 20) DispatchKeyValue(Ent, "model", "materials/sprites/franug/hp_bar_2/hp_bar5.vmt");
+	else DispatchKeyValue(Ent, "model", "materials/sprites/franug/hp_bar_2/hp_bar6.vmt");
 
 	DispatchKeyValue(Ent, "classname", "barra");
 	DispatchKeyValue(Ent, "spawnflags", "1");
@@ -182,28 +182,28 @@ Comprobar(client, hp)
 	
 	if(hp >= 100) {
 
-			SetEntityModel(entidad, "materials/sprites/franug/hp_bar/hp_bar1.vmt");
+			SetEntityModel(entidad, "materials/sprites/franug/hp_bar_2/hp_bar1.vmt");
 		
 	}
 	else if(hp >= 80) {
 
-			SetEntityModel(entidad, "materials/sprites/franug/hp_bar/hp_bar2.vmt");
+			SetEntityModel(entidad, "materials/sprites/franug/hp_bar_2/hp_bar2.vmt");
 	}
 	else if(hp >= 60) {
 
-			SetEntityModel(entidad, "materials/sprites/franug/hp_bar/hp_bar3.vmt");
+			SetEntityModel(entidad, "materials/sprites/franug/hp_bar_2/hp_bar3.vmt");
 	}
 	else if(hp >= 40) {
 
-			SetEntityModel(entidad, "materials/sprites/franug/hp_bar/hp_bar4.vmt");
+			SetEntityModel(entidad, "materials/sprites/franug/hp_bar_2/hp_bar4.vmt");
 	}
 	else if(hp > 20) {
 
-			SetEntityModel(entidad, "materials/sprites/franug/hp_bar/hp_bar5.vmt");
+			SetEntityModel(entidad, "materials/sprites/franug/hp_bar_2/hp_bar5.vmt");
 	}
 	else {
 
 
-			SetEntityModel(entidad, "materials/sprites/franug/hp_bar/hp_bar6.vmt");
+			SetEntityModel(entidad, "materials/sprites/franug/hp_bar_2/hp_bar6.vmt");
 	}
 }
